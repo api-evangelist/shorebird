@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.shorebird.dev/
+description: >-
+  Entity-relationship model of Shorebird code push, derived from the documented
+  object model (account, apps, releases, patches, tracks). Shorebird publishes no
+  OpenAPI, so relationships are inferred from the CLI/console concepts.
+entities:
+- name: Organization
+  id_field: org_id
+  summary: A billing account/team that owns apps and members with roles (admin, developer, viewer, app manager).
+- name: App
+  id_field: app_id
+  summary: A Flutter application registered with `shorebird init`; the unit code-push targets.
+- name: Release
+  id_field: version
+  summary: A published build of an App for a platform, versioned as semver+build (1.0.0+1).
+- name: Patch
+  id_field: patch_number
+  summary: An over-the-air update to a Release, identified by an auto-incrementing integer within that release.
+- name: Track
+  id_field: name
+  summary: A deployment channel (stable, staging, beta) a Patch/Release is assigned to.
+- name: ApiKey
+  id_field: key_id
+  summary: An account-scoped credential for programmatic/CI access.
+relationships:
+- {from: Organization, to: App, type: has_many, via: org_id}
+- {from: Organization, to: ApiKey, type: has_many, via: org_id}
+- {from: App, to: Release, type: has_many, via: app_id}
+- {from: Release, to: Patch, type: has_many, via: version}
+- {from: Patch, to: Track, type: belongs_to, via: track}
+- {from: Release, to: Track, type: belongs_to, via: track}

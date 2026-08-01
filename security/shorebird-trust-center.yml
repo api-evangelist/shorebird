@@ -1,0 +1,11 @@
+generated: '2026-07-21'
+method: searched
+source: https://trust.shorebird.dev/
+url: https://trust.shorebird.dev/
+certifications: []
+note: >-
+  Shorebird hosts a dedicated Trust Center at trust.shorebird.dev (verified
+  reachable). The page is a client-rendered trust portal; specific named
+  certifications (e.g. SOC 2 / ISO 27001) could not be extracted from the static
+  response and none were confirmed in public sources, so none are asserted here.
+  No Compliance pointer is emitted without a verified certification.

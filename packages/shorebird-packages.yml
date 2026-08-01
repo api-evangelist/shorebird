@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://pub.dev/publishers/shorebird.dev/packages
+packages:
+- language: dart
+  registry: pub.dev
+  name: shorebird_code_push
+  version: 2.0.7
+  url: https://pub.dev/packages/shorebird_code_push
+  install: flutter pub add shorebird_code_push
+  publisher: shorebird.dev
+  official: true
+  description: Check for and download Shorebird code push updates from your Flutter app at runtime.
+  repository: https://github.com/shorebirdtech/updater/tree/main/shorebird_code_push
+- language: dart
+  registry: github
+  name: shorebird_cli
+  url: https://github.com/shorebirdtech/shorebird/tree/main/packages/shorebird_cli
+  install: 'curl --proto ''=https'' --tlsv1.2 https://raw.githubusercontent.com/shorebirdtech/install/main/install.sh -sSf | bash'
+  official: true
+  description: The Shorebird command-line tool for managing apps, releases, and code-push patches. Distributed via the install script (not pub.dev); bundles a patched Flutter at ~/.shorebird.
+  repository: https://github.com/shorebirdtech/shorebird

@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of Shorebird hosts
+hosts:
+- host: https://shorebird.dev
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /llms.txt, status: 200, file: ../llms/shorebird-llms.txt}
+- host: https://console.shorebird.dev
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+- host: https://api.shorebird.dev
+  documents:
+  - {path: /.well-known/oauth-authorization-server, status: 426}
+  - {path: /.well-known/openid-configuration, status: 426}
+- host: https://docs.shorebird.dev
+  documents:
+  - {path: /llms.txt, status: 200, file: ../llms/shorebird-llms.txt}
+note: >-
+  No /.well-known discovery documents are published. api.shorebird.dev returns
+  426 Upgrade Required (a client-protocol gate), not a discovery document. The
+  only machine-readable index found is the docs llms.txt.

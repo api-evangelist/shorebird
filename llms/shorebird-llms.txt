@@ -1,0 +1,11 @@
+# Shorebird
+
+## Documentation Sets
+
+- [Abridged documentation](https://docs.shorebird.dev/llms-small.txt): a compact version of the documentation for Shorebird, with non-essential content removed
+- [Complete documentation](https://docs.shorebird.dev/llms-full.txt): the full documentation for Shorebird
+
+## Notes
+
+- The complete documentation includes all content from the official documentation
+- The content is automatically generated from the same source as the official documentation

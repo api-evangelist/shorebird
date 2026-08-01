@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/shorebirdtech/shorebird/releases
+scheme: semver
+current_version: v1.6.114
+note: >-
+  Shorebird publishes dated release notes for its CLI/tooling as GitHub Releases
+  on shorebirdtech/shorebird. Each release pins a Flutter/Dart version and lists
+  platform fixes. Recent window only.
+entries:
+- version: v1.6.114
+  date: '2026-07-21'
+  breaking: false
+  highlights:
+  - Flutter 3.44.7 / Dart 3.12.2 support
+  - 'Android: fix a file-descriptor leak that could crash apps using external textures (e.g. video) on some GPUs such as Arm Mali'
+- version: v1.6.112
+  date: '2026-07-10'
+  breaking: false
+  highlights:
+  - Flutter 3.44.6 / Dart 3.12.2 support
+  - 'Linux: fix a crash building asset bundles with native assets enabled but no native app build dir'
+  - 'Android: fix a crash when running instrumented tests'
+- version: v1.6.111
+  date: '2026-07-07'
+  breaking: false
+  highlights:
+  - Flutter 3.44.5 / Dart 3.12.2 support
+  - 'Android: fix libapp.so sometimes missing from the APK/app bundle when building with flavors'
+- version: v1.6.110
+  date: '2026-06-25'
+  breaking: false
+  highlights:
+  - Flutter 3.44.4 / Dart 3.12.2 support
+  - 'Linux: fix bounds checking in FlAccessibleTextField'
+- version: v1.6.109
+  date: '2026-06-23'
+  breaking: false
+  highlights:
+  - Flutter 3.44.3 / Dart 3.12.2 support
+  - Fix a potential buffer overflow in the animated PNG decoder when parsing malformed fdAT chunks

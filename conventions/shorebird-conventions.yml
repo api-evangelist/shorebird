@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.shorebird.dev/
+description: >-
+  Cross-cutting operating conventions for Shorebird code push, captured from the
+  documentation. Shorebird is a CLI/console-driven service (no public REST
+  OpenAPI), so these conventions describe the release/patch model rather than a
+  raw HTTP contract.
+authentication:
+  style: token
+  detail: See authentication/shorebird-authentication.yml (console OAuth + SHOREBIRD_TOKEN + API keys).
+versioning:
+  scheme: semver-plus-build
+  detail: >-
+    Releases use Flutter semantic versioning with a build number (e.g. 1.0.0+1).
+    Patches are identified by their release version plus an auto-incrementing
+    integer patch number.
+tracks:
+  values: [stable, staging, beta]
+  default: stable
+  detail: >-
+    Patches and releases are assigned to a track via --track; staging is used to
+    validate a patch on internal builds before promoting to stable.
+rollouts:
+  style: percentage-based
+  detail: >-
+    Patches can be rolled out to a configurable percentage of devices and then
+    ramped up; a patch can be paused or rolled back.
+rollback:
+  supported: true
+  detail: A previously shipped patch can be rolled back so devices revert to the prior patch or the base release.
+idempotency:
+  supported: false
+  detail: >-
+    Shorebird does not document an idempotency-key contract; patch numbers are
+    server-assigned auto-incrementing integers rather than client-supplied keys.
+error_semantics:
+  detail: The CLI reports human-readable errors and non-zero exit codes; there is no documented RFC 9457 problem+json envelope.
+cross_links:
+  authentication: authentication/shorebird-authentication.yml
+  lifecycle: lifecycle/shorebird-lifecycle.yml
+  changelog: changelog/shorebird-changelog.yml
+  cli: cli/shorebird-cli.yml

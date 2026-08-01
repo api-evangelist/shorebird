@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.shorebird.dev/code-push/guides/staging-patches/
+description: >-
+  Shorebird has no card/credential-style sandbox; its pre-production surface is
+  the staging track plus preview and dry-run tooling, which let developers
+  validate a patch before it reaches stable-track production devices.
+mechanisms:
+- name: staging track
+  detail: 'Ship a patch to --track=staging so only internal/staging builds receive it; promote to stable when validated.'
+  invoke: shorebird patch android --track=staging
+- name: preview
+  detail: Run a release or patch on a connected device without shipping it to users.
+  invoke: shorebird preview
+- name: dry-run
+  detail: Validate that a release or patch builds and would upload, without actually uploading (CI-friendly).
+  invoke: shorebird patch android --dry-run
+- name: percentage-based rollout
+  detail: Roll a stable patch out to a small percentage of devices first, then ramp up or roll back.
+note: No fixed magic/test identifiers are published; validation is done against real builds on the staging track.

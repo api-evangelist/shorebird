@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.shorebird.dev/
+versioning:
+  scheme: semver-plus-build
+  current: v1.6.114
+  detail: >-
+    The Shorebird CLI/tooling is versioned with semantic versioning (latest tool
+    release v1.6.114, 2026-07-21). App releases follow Flutter semver+build
+    (1.0.0+1); patches carry an auto-incrementing integer.
+  releases: https://github.com/shorebirdtech/shorebird/releases
+support_policy:
+  detail: >-
+    Each Shorebird tool release tracks a specific Flutter/Dart version (e.g.
+    v1.6.114 -> Flutter 3.44.7 / Dart 3.12.2); older Flutter versions are
+    supported through prior tool releases.
+status:
+  page: https://docs.shorebird.dev/system/status/
+  detail: System status and operational information are published in the docs; no dedicated live incident dashboard host was found.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support was found in the documentation.
