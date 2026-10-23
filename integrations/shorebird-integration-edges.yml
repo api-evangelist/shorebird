@@ -1,0 +1,59 @@
+edges:
+- partner_name: pub.dev
+  partner: pub-dev
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Dart/Flutter)
+  evidence: https://pub.dev/packages/shorebird_ci
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: pub.dev (public registry JSON)
+    spec_file: null
+    language: Dart/Flutter
+    packages:
+    - name: shorebird_ci
+      version: 0.2.4
+      released: '2026-05-19'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/shorebird_ci
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:shorebird.dev
+      matched_by: domain
+    - name: shorebird_code_push
+      version: 2.0.7
+      released: '2026-07-09'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/shorebird_code_push
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:shorebird.dev
+      matched_by: domain
+    - name: shorebird_redis_client
+      version: 0.0.15
+      released: '2026-10-17'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/shorebird_redis_client
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:shorebird.dev
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-php-dart-elixir-package-registries.py
+    detected: '2026-10-22'
+  detected_by: sweep-php-dart-elixir-package-registries.py
+  first_seen: '2026-10-22'
+generated: '2026-10-22'
+method: searched
+source:
+- https://packagist.org/packages
+- https://pub.dev/api
+- https://hex.pm/api
+checked:
+- https://hex.pm/api
+- https://packagist.org/packages
+- https://pub.dev/api
